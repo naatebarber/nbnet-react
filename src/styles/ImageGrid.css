@@ -1,0 +1,45 @@
+@import url("./Root.css");
+
+.imageGrid {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.imageWrapper {
+    position: relative;
+    grid-column: span 3;
+    overflow: hidden;
+    transition: all 200ms ease-in;
+}
+
+.image {
+    height: 100px;
+    padding: 50px;
+    transition: all 200ms ease-in;
+}
+
+.image:hover {
+    padding: 40px;
+    height: 120px;
+}
+
+@media screen and (min-width: 769px) {
+    .imageWrapper {
+        grid-column: span 4;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imageWrapper {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .imageWrapper {
+        grid-column: span 12;
+    }
+}

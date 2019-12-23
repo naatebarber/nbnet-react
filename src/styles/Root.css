@@ -1,0 +1,103 @@
+@font-face {
+    src: url("./fonts/Source.otf") format('opentype');
+    font-family: Source;
+    font-style: normal;
+}
+
+:root {
+    --primary-font: Source;
+    --primary-text-color: #3e3eee;
+    --secondary-text-color: #656565;
+    --accent-1: white;
+    --accent-2: #efefef;
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    position: relative;
+    text-align: center;
+    font-family: Source;
+    color: var(--primary-text-color);
+}
+
+.section {
+    min-height: calc(100vh - 250px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    font-size: 30px;
+    color: var(--primary-text-color);
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* accents */
+
+.accent1 {
+    background-color: var(--accent-1);
+}
+
+.accent2 {
+    background-color: var(--accent-2);
+}
+
+/* text */
+
+.text {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.text > h3 {
+    font-weight: lighter;
+    margin-top: 35px;
+    font-size: 25px;
+    color: var(--primary-text-color)
+}
+
+.text > p {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--secondary-text-color)
+}
+
+code {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #545454;
+    color: #8377af;
+    white-space: pre-wrap;
+    display: block;
+    tab-size: 2;
+    font-size: 16px;
+    line-height: 24px;
+    height: 150px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.text > h3, .text > p, .text > code {
+    grid-column: 3 / span 8;
+}
+
+@media screen and (max-width: 480px) {
+    .text > h3, .text > p, .text > code {
+        grid-column: 2 / span 10
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .text > h3, .text > p, .text > code {
+        grid-column: 4 / span 6
+    }
+}

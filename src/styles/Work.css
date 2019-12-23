@@ -1,0 +1,52 @@
+@import url("./Root.css");
+
+.workPart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    text-align: left;
+}
+
+.workPartRow {
+    grid-column: 3 / span 8;
+}
+
+.workLocation {
+    font-size: 25px;
+    color: var(--primary-text-color);
+    margin-top: 60px;
+}
+
+.workTitle {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.workTimespan {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    font-weight: lighter;
+    opacity: 0.7;
+}
+
+.workDescription {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 24px;
+    margin-top: 30px;
+    padding-left: 15px;
+    margin-left: 30px;
+    border-left: 1px solid var(--primary-text-color);
+}
+
+@media screen and (max-width: 480px) {
+    .workTimespan {
+        display: block;
+    }
+    .workPartRow {
+        grid-column: 2 / span 10;
+    }
+}

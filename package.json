@@ -1,0 +1,47 @@
+{
+  "name": "nathanbarber.net",
+  "version": "1.0.0",
+  "description": "React version of my portfolio website",
+  "main": "./src/index.jsx",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "pack": "webpack && ./packer.sh"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "author": "nathanbarber",
+  "license": "ISC",
+  "dependencies": {
+    "contentful": "^7.9.1",
+    "history": "^4.9.0",
+    "react": "^16.9.0",
+    "react-animate-height": "^2.0.15",
+    "react-animation": "^1.2.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-transition-group": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "react-hot-loader": "^4.12.12",
+    "react-router": "^5.0.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
